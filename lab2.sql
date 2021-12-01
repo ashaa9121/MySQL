@@ -11,18 +11,7 @@ CREATE TABLE users(
     PRIMARY KEY(id)
 );
 
--- 2. Table for post online complaints.
-
-CREATE TABLE online_complaints(
-    id INT NOT NULL AUTO_INCREMENT,
-    user_id VARCHAR(100) NOT NULL,
-    complaint_details VARCHAR(300) NOT NULL,
-    date DATE,
-    PRIMARY KEY(id),
-    FOREIGN KEY(user_id) REFERENCES users(id)
-);
-
--- 3. Employee table.
+-- 2. Employee table.
 
 CREATE TABLE employee (
     id INT NOT NULL AUTO_INCREMENT,
@@ -33,7 +22,7 @@ CREATE TABLE employee (
     PRIMARY KEY (id)
 );
 
--- 4.Agent table.
+-- 3.Agent table.
 
 CREATE TABLE agent(
     id INT NOT NULL AUTO_INCREMENT,
@@ -44,7 +33,7 @@ CREATE TABLE agent(
     PRIMARY KEY(id)
 );
 
--- 5. Complaint status table.
+-- 4. Complaint status table.
 
 CREATE TABLE complaint_status(
     id INT NOT NULL AUTO_INCREMENT,
